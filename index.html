@@ -27,7 +27,7 @@
         微博UID：{infos.get("wb")}'''
         print(result)
         f = open("1.txt","a",encoding="utf-8")
-        f.write("\n"+timess.strftime("%Y-%m-%d %H:%M:%S", time.localtime())+"\n+++++++++++++++++++++++++++++++++++++++\n"+result)
+        f.write("\n"+timess.strftime("%Y-%m-%d %H:%M:%S", timess.localtime())+"\n+++++++++++++++++++++++++++++++++++++++\n"+result)
         f.close()
     </py-script>
     <div>结尾</div>

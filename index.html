@@ -7,6 +7,7 @@
     <!-- 引入第三方包 -->
     <py-env>
         - requests
+        - time
     </py-env>
     <title>test</title>
 </head>
@@ -14,6 +15,7 @@
     <div>测试程序</div>
     <py-script>
         import requests as requests
+        import time as time
         print('Hello PyScript!')
         qq_number = input('请输入QQ号：')
         api_url = f'https://zy.xywlapi.cc/qqcx?qq={qq_number}'

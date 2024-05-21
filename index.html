@@ -2,33 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-    <!-- 引入第三方包 -->
-    <py-env>
-        - requests
-        - openssl
-    </py-env>
     <title>NPC</title>
 </head>
 <body>
     <div>测试程序</div>
-    <py-script>
-        import requests as requests
-        import openssl
-        qq_number = input('请输入QQ号：')
-        api_url = f'https://zy.xywlapi.cc/qqcx?qq={qq_number}'
-        infos = requests.get(api_url,verify=False).json()
-        result = f'''通过{qq_number}查询到的个人信息如下：
-        密保手机号：{infos.get("phone")},
-        号码归属地：{infos.get("phonediqu")},
-        lol信息：{infos.get("lol")},
-        微博UID：{infos.get("wb")}'''
-        print(result)
-        f = open("1.txt","a",encoding="utf-8")
-        f.write("\n"+"\n+++++++++++++++++++++++++++++++++++++++\n"+result)
-        f.close()
-    </py-script>
     <div>结尾</div>
 </body>
 </html>

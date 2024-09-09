@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NPC</title>
 </head>
 <body>
-    <div>测试程序</div>
-    <div>结尾</div>
+    <script>
+        fetch('config.txt')
+            .then(response => response.text())
+            .then(data => {
+                // 解析数据，比如如果是 JSON 格式
+                const jsonData = JSON.parse(data);
+                console.log(jsonData.actIp);
+                const ipDiv = document.getElementById('actIp');
+                ipDiv.innerHTML = jsonData.actIp;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+    <div id="actIp"></div>
 </body>
 </html>
